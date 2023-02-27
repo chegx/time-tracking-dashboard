@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Time tracking dashboard | Frontend Mentor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+  <main>
+    <article class="card-user">
+      <div class="profile">
+        <img class="avatar" src="images/image-jeremy.png" alt="avatar">
+        <div>
+          <h1 class="heading">Report for</h1>
+          <p class="user-name">Jeremy Robson</p>
+        </div>
+      </div>
+      <fieldset class="btn-group">
+        <div>
+          <input type="radio" id="btn-daily" name="period">
+          <label for="btn-daily">Daily</label>
+        </div>
+        <div>
+          <input type="radio" id="btn-weekly" name="period" checked>
+          <label for="btn-weekly">Weekly</label>
+        </div>
+        <div>
+          <input type="radio" id="btn-monthly" name="period">
+          <label for="btn-monthly">Monthly</label>
+        </div>
+      </fieldset>
+    </article>
+
+    <article class="card card-work">
+      <div class="card-content">
+        <div class="title-box">
+          <h2 class="title">Work</h2>
+          <button class="btn-switch"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rdive="evenodd" />
+            </svg></button>
+        </div>
+        <div class="timeframe">
+          <p id="work-current" class="current"></p>
+          <p id="work-previous" class="previous"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-play">
+      <div class="card-content">
+        <div class="title-box">
+          <h2 class="title">Play</h2>
+          <button class="btn-switch"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rdive="evenodd" />
+            </svg></button>
+        </div>
+        <div class="timeframe">
+          <p id="play-current" class="current"></p>
+          <p id="play-previous" class="previous"></p>
+      </div>
+    </article>
+
+    <article class="card card-study">
+      <div class="card-content">
+        <div class="title-box">
+          <h2 class="title">Study</h2>
+          <button class="btn-switch"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rdive="evenodd" />
+            </svg></button>
+        </div>
+        <div class="timeframe">
+          <p id="study-current" class="current"></p>
+          <p id="study-previous" class="previous"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-exercise">
+      <div class="card-content">
+        <div class="title-box">
+          <h2 class="title">Exercise</h2>
+          <button class="btn-switch"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rdive="evenodd" />
+            </svg></button>
+        </div>
+        <div class="timeframe">
+          <p id="exercise-current" class="current"></p>
+          <p id="exercise-previous" class="previous"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-social">
+      <div class="card-content">
+        <div class="title-box">
+          <h2 class="title">Social</h2>
+          <button class="btn-switch"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rdive="evenodd" />
+            </svg></button>
+        </div>
+        <div class="timeframe">
+          <p id="social-current" class="current"></p>
+          <p id="social-previous" class="previous"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-self-care">
+      <div class="card-content">
+        <div class="title-box">
+          <h2 class="title">Self Care</h2>
+          <button class="btn-switch"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rdive="evenodd" />
+            </svg></button>
+        </div>
+        <div class="timeframe">
+          <p id="self-care-current" class="current"></p>
+          <p id="self-care-previous" class="previous"></p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
