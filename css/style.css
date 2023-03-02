@@ -20,16 +20,22 @@
 body {
   background-color: var(--very-dark-blue);
   font-family: "Rubik", sans-serif;
-}
-
-main {
   display: grid;
   grid-template-columns: 88%;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+main {
+  display: grid;
   gap: 2rem;
   margin: 8rem 0;
+}
+
+section {
+  display: grid;
+  gap: 2rem;
 }
 
 /* radio buttons */
@@ -118,36 +124,6 @@ label:hover {
   position: relative;
 }
 
-.card-work {
-  background-color: var(--work);
-  background-image: url("/images/icon-work.svg");
-}
-
-.card-play {
-  background-color: var(--play);
-  background-image: url("/images/icon-play.svg");
-}
-
-.card-study {
-  background-color: var(--study);
-  background-image: url("/images/icon-study.svg");
-}
-
-.card-exercise {
-  background-color: var(--exercise);
-  background-image: url("/images/icon-exercise.svg");
-}
-
-.card-social {
-  background-color: var(--social);
-  background-image: url("/images/icon-social.svg");
-}
-
-.card-self-care {
-  background-color: var(--self-care);
-  background-image: url("/images/icon-self-care.svg");
-}
-
 .card-content {
   background-color: var(--dark-blue);
   border-radius: 1.5rem;
@@ -201,22 +177,15 @@ label:hover {
 /* === TABLET SIZE === */
 @media (min-width: 700px) {
   body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
+    grid-template-columns: 60%;
   }
 
   main {
-    grid-template-columns: 1fr 1fr;
-    margin: 8rem 20%;
-    gap: 3rem;
-    align-items: unset;
-    min-height: unset;
+    grid-template-columns: 1fr;
   }
 
-  .card-user {
-    grid-column: 1/ 3;
+  section {
+    grid-template-columns: 1fr 1fr;
   }
 
   .card {
@@ -232,15 +201,23 @@ label:hover {
 }
 
 /* === DESKTOP SIZE === */
+
 @media (min-width: 1300px) {
+  body {
+    grid-template-columns: 80%;
+  }
+
   main {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 8rem 16rem;
+    grid-template-columns: 0.9fr 3fr;
+    gap: 3rem;
+  }
+
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
   }
 
   .card-user {
-    grid-column: unset;
-    grid-row: 1/ 3;
     height: unset;
   }
 
