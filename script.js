@@ -31,7 +31,7 @@ document.getElementById("allCards").innerHTML = allCards;
 for (let i = 0; i < data.length; i++) {
   let title = data[i].title.toLowerCase().replace(/\s/, "-");
   document.querySelectorAll(`.card`)[i].style.backgroundColor = `var(--${title})`;
-  document.querySelectorAll(`.card`)[i].style.backgroundImage = `url("/images/icon-${title}.svg")`;
+  document.querySelectorAll(`.card`)[i].style.backgroundImage = `url("./images/icon-${title}.svg")`;
 }
 
 //view weekly stats by default and by clicking buttons
