@@ -46,10 +46,8 @@ document.querySelectorAll("input").forEach(btn => {
     if (btn.value == "weekly") periodString = "Last Week - ";
     if (btn.value == "monthly") periodString = "Last Month - ";
     for (let i = 0; i < data.length; i++) {
-      let currentString = "data[i].timeframes." + btn.value + ".current";
-      let previousString = "data[i].timeframes." + btn.value + ".previous";
-      document.querySelectorAll(".current")[i].textContent = eval(currentString) + "hrs";
-      document.querySelectorAll(".previous")[i].textContent = periodString + eval(previousString) + "hrs";
+      document.querySelectorAll(".current")[i].textContent = data[i].timeframes[btn.value].current + "hrs";
+      document.querySelectorAll(".previous")[i].textContent = periodString + data[i].timeframes[btn.value].previous + "hrs";
     }
   }
 });
